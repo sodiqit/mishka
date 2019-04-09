@@ -62,6 +62,7 @@
       <img src="images/triple-set-desktop.jpg" alt="Вязанные корзинки" width="525" height="636">
     </section>
     <section class="about-us">
+      <h2 class="about-us__title">Коротко о нас:</h2>
       <ul class="about-us__advantages advantages">
         <li class="advantages__item">Экологически <br> чистые материалы</li>
         <li class="advantages__item">Скандинавский стиль <br> по российской цене</li>
@@ -109,6 +110,26 @@
     </ul>
     <p class="footer-developer">Разработано<img src="images/html.svg" alt="" width="27" height="34"></p>
   </footer>
+
+  <section class="modal">
+    <h2 class="modal__title">Добавить в корзину</h2>
+    <form action="https://echo.htmlacademy.ru" class="modal__form" method="post">
+      <h3 class="modal__subtitle">Выберите размер:</h3>
+      <label class="modal__size">
+        <input class="visually-hidden" type="radio" name="size" value="s">
+        <span class="modal__size__button">s</span>
+      </label>
+      <label class="modal__size">
+        <input class="visually-hidden" type="radio" name="size" value="m">
+        <span class="modal__size__button">m</span>
+      </label>
+      <label class="modal__size">
+        <input class="visually-hidden" type="radio" name="size" value="l">
+        <span class="modal__size__button">l</span>
+      </label>
+      <button class="modal__button button">Добавить</button>
+    </form>
+  </section>
 </body>
 
 </html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Catalog Mishka</title>
+</head>
+<body>
+  <header class="page-header">
+  <div class="page-header__wrapper-one">
+    <a class="page-header__logo" href="#">
+      <img class="page-header__img-logo" src="images/logo.svg" width="86" height="35" alt="Логотип компании Mishka">
+    </a>
+      <nav class="main-nav">
+        <ul class="main-nav__navigation site-navigation">
+          <li class="site-navigation__item"><a href="catalog.html">Каталог товаров</a></li>
+          <li class="site-navigation__item"><a href="order.html">Вязание на заказ</a></li>
+          <li class="site-navigation__item">Поиск по сайту</li>
+          <li class="site-navigation__item"><a href="cart.html">Корзина: пока пуста</a></li>
+        </ul>
+      </nav>
+  </div>
+  <div class="page-header__wrapper-two">
+    <ul class="wrapper-two__navigation">
+      <li class="wrapper-two__navigation__item"><a href="#">Новые поступления</a></li>
+      <li class="wrapper-two__navigation__item"><a href="#">Распродажа</a></li>
+      <li class="wrapper-two__navigation__item"><span>Бесплатная доставка по России</span></li>
+    </ul>
+  </div>
+  </header>
+
+  <main class="page-main">
+    <h1 class="main__title">Каталог товаров</h1>
+    <section class="catalog">
+      <ul class="catalog__list products">
+        <li class="products__item">
+          <img src="images/" alt="Зайчик-попрыгайчик" width="316" height="462">
+          <h3 class="products__title">Зайчик-попрыгайчик</h3>
+          <p class="products__subtitle">Рост 30 см, вес 200 г</p>
+          <span class="products__price">1200 руб.</span>
+          <button class="products__cart"><span class="visually-hidden">Купить</span></button>
+        </li>
+        <li class="products__item">
+          <img src="images/" alt="Корзинка для белья" width="316" height="462">
+          <h3 class="products__title">Корзинка для белья</h3>
+          <p class="products__subtitle">Диаметр 15 см, высота 10 см</p>
+          <span class="products__price">690 руб.</span>
+          <button class="products__cart"><span class="visually-hidden">Купить</span></button>
+        </li>
+        <li class="products__item">
+          <img src="images/" alt="Большая корзинка для игрушек" width="316" height="462">
+          <h3 class="products__title">Большая корзинка <br> для игрушек</h3>
+          <p class="products__subtitle">Диаметр 30 см, высота 30 см</p>
+          <span class="products__price">1500 руб.</span>
+          <button class="products__cart"><span class="visually-hidden">Купить</span></button>
+        </li>
+      </ul>
+    </section>
+    <section class="process">
+      <img src="images/1.jpg" alt="Процесс производства" width="682" height="455">
+      <div class="making__container">
+          <h2 class="making__title">Процесс <br> производства</h2>
+          <p class="making__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <a href="form.html" class="making__button button">Сделать заказ</a>
+        </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <a href="#" class="logo-footer"><img src="images/logo-footer" alt="" class="logo-footer__image" width="102" height="34"></a>
+    <ul class="footer-social">
+      <li class="footer-social__item footer-social__item--instagram"><span class="visually-hidden">Instagram</span></li>
+      <li class="footer-social__item footer-social__item--facebook"><span class="visually-hidden">Facebook</span></li>
+      <li class="footer-social__item footer-social__item--twitter"><span class="visually-hidden">Twitter</span></li>
+    </ul>
+    <p class="footer-developer">Разработано<img src="images/html.svg" alt="" width="27" height="34"></p>
+  </footer>
+
+  <section class="modal">
+    <h2 class="modal__title">Добавить в корзину</h2>
+    <form action="https://echo.htmlacademy.ru" class="modal__form" method="post">
+      <h3 class="modal__subtitle">Выберите размер:</h3>
+      <label class="modal__size">
+        <input class="visually-hidden" type="radio" name="size" value="s">
+        <span class="modal__size__button">s</span>
+      </label>
+      <label class="modal__size">
+        <input class="visually-hidden" type="radio" name="size" value="m">
+        <span class="modal__size__button">m</span>
+      </label>
+      <label class="modal__size">
+        <input class="visually-hidden" type="radio" name="size" value="l">
+        <span class="modal__size__button">l</span>
+      </label>
+      <button class="modal__button button">Добавить</button>
+    </form>
+  </section>
+</body>
+</html>
