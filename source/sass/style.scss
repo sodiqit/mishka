@@ -54,7 +54,8 @@ img {
 
 @media (min-width:$desktop-width) {
   .container {
-    width: auto;
+    width: 1250px;
     padding: 0 100px;
+    margin: 0 auto;
   }
 }

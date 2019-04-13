@@ -20,12 +20,14 @@
   }
 }
 
-.main-nav__navigation {
+.main-nav__navigation,
+.user-list {
   @include reset;
   list-style: none;
 }
 
-.site-navigation__item {
+.site-navigation__item,
+.user-list__item {
   padding-top: 27px;
   // padding-left: 76px;
   padding-left: 24%;
@@ -73,8 +75,17 @@
 }
 
 @media (min-width:$tablet-width) {
+
   .page-header {
-    box-shadow:0 1px 0 0 $gray-shadow;
+    box-shadow: none;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      box-shadow:0 1px 0 0 $gray-shadow;
+      top: 88px;
+      height: 1px;
+    }
   }
 
   .page-header__logo {
@@ -82,7 +93,7 @@
     flex-basis: 320px;
     padding-top: 22px;
     padding-bottom: 22px;
-    box-shadow:1px 0 0 0 $gray-shadow;
+    box-shadow:none;
     &-img-mobile {
       display: none;
     }
@@ -94,72 +105,47 @@
     }
   }
 
-  .container {
+  .page-header__wrapper-one {
     display: flex;
     flex-shrink: 0;
     flex-wrap: wrap;
     position: relative;
   }
 
-  .submain-nav {
-    display: flex;
-    flex-shrink:0;
-    flex-wrap: wrap;
-  }
-
-  .page-header__wrapper-one {
-    display: flex;
-    flex-shrink: 0;
-  }
-
-  .site-navigation {
-    display: flex;
-    flex-shrink:0;
-    flex-wrap: wrap;
-  }
 
   .page-header__wrapper-one {
     flex-basis: 668px;
   }
 
   .main-nav {
-    flex-basis:368px;
+    order:1;
+    margin-top: 18px;
   }
 
-  .site-navigation__item {
-    &--catalog {
-      font-size: 15px;
-      order:1;
-      padding: 0;
-      position: absolute;
-      bottom: -42px;
-      left: 50px;
-      box-shadow: none;
-    }
-    &--form {
-      font-size: 15px;
-      order:2;
-      padding: 0;
-      position: absolute;
-      bottom: -42px;
-      left: 217px;
-      box-shadow: none;
-    }
+  .user-list {
+    display: flex;
+    flex-shrink: 0;
+    flex-basis: 348px;
+  }
+
+  .user-list__item {
     &--search {
-      font-size: 0;
-      flex-basis: 80px;
       padding: 0;
-      height: 89px;
+      font-size: 0;
+      flex-basis: 84px;
+      box-shadow:
+        inset 1px 0 0 0 $gray-shadow;
+      cursor: pointer;
     }
     &--search::after {
-      content: '';
-      position: absolute;
-      left: 30px;
-      top: 32px;
+      left: 34px;
+      top: 37px;
     }
     &--cart {
-      height: 89px;
-      padding-left: 96px;
+      min-height: 89px;
+      padding: 0;
+      padding-left: 81px;
+      padding-top: 31px;
       box-shadow:
       inset 1px 0 0 0 $gray-shadow;
       &::after {
@@ -167,27 +153,117 @@
         background-repeat: no-repeat;
         width:21px;
         height: 18px;
-        left:45px;
+        left:32px;
+        top: 35px;
       }
     }
+  }
+
+  .site-navigation {
+    display: flex;
+  }
+
+  .site-navigation__item {
+    font-size: 15px;
+    padding: 0;
+    box-shadow: 0 0 0 0;
+    margin-right: 36px;
+  }
+
+  .page-header__wrapper-two {
+    position: relative;
   }
 
   .submain-nav {
     @include reset;
     list-style:none;
-    margin-right: auto;
+    position: absolute;
+    display: block;
+    right: 0;
+    top: -25px;
   }
 
   .submain-nav__item {
-    position: absolute;
-    bottom: -41px;
-    right: 50px;
     span {
       font-size: 15px;
     }
     &--new,
     &--sale {
       display: none;
+    }
+  }
+}
+
+@media (min-width:$desktop-width) {
+  .page-header__wrapper-one {
+    flex-wrap:nowrap;
+  }
+
+  .page-header__logo {
+    order:1;
+    flex-basis: 249px;
+    height: 89px;
+    padding-top: 9px;
+    padding-bottom: 7px;
+    margin-left: 40px;
+    box-shadow:none;
+    &-img-mobile {
+      display: none;
+    }
+    &-img-tablet {
+      display: none;
+    }
+    &-img-desktop {
+      display: block;
+    }
+  }
+
+  .main-nav {
+    order:0;
+    margin-top: 0;
+    min-height: 89px;
+  }
+
+  .site-navigation__item {
+    min-height: 89px;
+    font-size: 17px;
+    padding: 0;
+    padding-right: 36px;
+    padding-top: 31px;
+    padding-left: 35px;
+    box-shadow: 0 0 0 0;
+    margin-right: 0;
+    box-shadow:
+      inset 1px 0 0 0 $gray-shadow;
+    &:first-child {
+      box-shadow: none;
+      padding-left: 0;
+    }
+  }
+
+  .user-list {
+    order:2;
+  }
+
+  .submain-nav {
+    position: relative;
+    display: flex;
+    margin-top: 42px;
+  }
+
+  .submain-nav__item {
+    font-size: 15px;
+    a {
+      color:inherit;
+    }
+    &--new,
+    &--sale {
+      display: block;
+      margin-right: 61px;
+      font-weight: bold;
+    }
+    &--delivery {
+      margin-left: auto;
     }
   }
 }
