@@ -1,0 +1,15 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+
+
+.pick-catalog__list {
+  list-style: none;
+  @include reset;
+  font-size: 19px;
+  font-weight: bold;
+  color:#ffffff;
+  a {
+    color:inherit;
+  }
+}

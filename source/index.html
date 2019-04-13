@@ -11,34 +11,38 @@
 
 <body>
   <header class="page-header">
-  <div class="page-header__wrapper-one">
-    <a class="page-header__logo" href="#">
-      <img class="page-header__img-logo" src="images/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип компании Mishka">
-    </a>
-      <nav class="main-nav">
-        <ul class="main-nav__navigation site-navigation">
-          <li class="site-navigation__item"><a href="catalog.html">Каталог товаров</a></li>
-          <li class="site-navigation__item"><a href="form.html">Вязание на заказ</a></li>
-          <li class="site-navigation__item">Поиск по сайту</li>
-          <li class="site-navigation__item"><a href="cart.html">Корзина: пока пуста</a></li>
+    <div class="container">
+      <div class="page-header__wrapper-one">
+        <a class="page-header__logo" href="#">
+          <img class="page-header__logo-img-mobile" src="images/mobile/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип компании Mishka">
+          <img class="page-header__logo-img-tablet" src="images/tablet/mishka-logo-tablet.svg" width="112" height="46" alt="Логотип компании Mishka">
+          <img class="page-header__logo-img-desktop" src="images/desktop/mishka-logo-desktop.svg" width="149" height="72" alt="Логотип компании Mishka">
+        </a>
+          <nav class="main-nav">
+            <ul class="main-nav__navigation site-navigation">
+              <li class="site-navigation__item site-navigation__item--catalog"><a href="catalog.html">Каталог товаров</a></li>
+              <li class="site-navigation__item site-navigation__item--form"><a href="form.html">Вязание на заказ</a></li>
+              <li class="site-navigation__item site-navigation__item--search">Поиск по сайту</li>
+              <li class="site-navigation__item site-navigation__item--cart"><a href="cart.html">Корзина: пока пуста</a></li>
+            </ul>
+          </nav>
+      </div>
+      <div class="page-header__wrapper-two">
+        <ul class="submain-nav">
+          <li class="submain-nav__item submain-nav__item--new"><a href="#">Новые поступления</a></li>
+          <li class="submain-nav__item submain-nav__item--sale"><a href="#">Распродажа</a></li>
+          <li class="submain-nav__item"><span>Бесплатная доставка по России</span></li>
         </ul>
-      </nav>
-  </div>
-  <div class="page-header__wrapper-two">
-    <ul class="wrapper-two__navigation">
-      <li class="wrapper-two__navigation__item"><a href="#">Новые поступления</a></li>
-      <li class="wrapper-two__navigation__item"><a href="#">Распродажа</a></li>
-      <li class="wrapper-two__navigation__item"><span>Бесплатная доставка по России</span></li>
-    </ul>
-  </div>
+      </div>
+    </div>
   </header>
 
   <main class="page-main">
     <h1 class="main__title">Милые штуки ручной работы для дома</h1>
     <section class="pick-catalog">
       <ul class="pick-catalog__list index-catalog">
-        <li class="index-catalog__item"><a href="catalog.html">Предметы<br> интерьера</a></li>
-        <li class="index-catalog__item"><a href="catalog.html">Детские<br> игрушки</a></li>
+        <li class="index-catalog__item index-catalog__item--left"><a href="catalog.html">Предметы<br> интерьера</a></li>
+        <li class="index-catalog__item index-catalog__item--right"><a href="catalog.html">Детские<br> игрушки</a></li>
       </ul>
     </section>
     <section class="product-of-week">

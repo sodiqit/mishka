@@ -1,4 +1,8 @@
-@import 'header.scss';
+@import 'page-header.scss';
+@import 'mixins.scss';
+@import 'outline.scss';
+@import 'variables.scss';
+@import 'normalize.scss';
 
 @font-face {
     font-family: "Open Sans", sans-serif;
@@ -21,8 +25,7 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
+    @include reset;
     font-family: 'Open Sans' ,'Arial', sans-serif;
     font-size: 17px;
     line-height: 24px;
@@ -30,4 +33,28 @@ body {
     a {
         text-decoration: none;
     }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// .container {
+//   width: auto;
+//   padding: 0 40px;
+// }
+
+@media (min-width:$tablet-width) {
+  .container {
+    width: auto;
+    padding: 0 50px;
+  }
+}
+
+@media (min-width:$desktop-width) {
+  .container {
+    width: auto;
+    padding: 0 100px;
+  }
 }
