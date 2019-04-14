@@ -3,6 +3,8 @@
 
 .page-header {
   box-shadow:0 1px 0 0 $gray-shadow;
+  position: relative;
+  z-index: 2;
 }
 
 .page-header__logo {
@@ -119,7 +121,8 @@
 
   .main-nav {
     order:1;
-    margin-top: 18px;
+    top: 107px;
+    position: absolute;
   }
 
   .user-list {
@@ -180,7 +183,7 @@
     position: absolute;
     display: block;
     right: 0;
-    top: -25px;
+    top: 18px;
   }
 
   .submain-nav__item {
@@ -221,6 +224,7 @@
   .main-nav {
     order:0;
     margin-top: 0;
+    position: static;
     min-height: 89px;
   }
 
@@ -246,9 +250,8 @@
   }
 
   .submain-nav {
-    position: relative;
+    position: absolute;
     display: flex;
-    margin-top: 42px;
   }
 
   .submain-nav__item {
@@ -263,7 +266,7 @@
       font-weight: bold;
     }
     &--delivery {
-      margin-left: auto;
+      margin-left: 444px;
     }
   }
 }

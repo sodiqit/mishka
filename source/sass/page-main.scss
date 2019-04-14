@@ -1,9 +1,20 @@
 @import 'variables.scss';
 @import 'mixins.scss';
 
+.main__title {
+  @include reset;
+  background: $bg-color url(../images/mobile/hero-mobile.jpg) no-repeat 50% -6px;
+  padding-top: 75px;
+  padding-bottom: 130px;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+  font-size: 27px;
+  color:$bold;
+  line-height: 30px;
+}
 
-
-.pick-catalog__list {
+.index-catalog {
   list-style: none;
   @include reset;
   font-size: 19px;
@@ -11,5 +22,122 @@
   color:#ffffff;
   a {
     color:inherit;
+  }
+}
+
+.index-catalog__item {
+  position: relative;
+  font-size: 20px;
+  line-height: 30px;
+  &--left {
+    padding-left: 28px;
+    padding-top: 25px;
+    padding-bottom: 29px;
+    background-color:$int;
+  }
+  &--right {
+    padding-left: 28px;
+    padding-top: 25px;
+    padding-bottom: 29px;
+    background-color:$toy;
+  }
+}
+
+.index-catalog__toy {
+  position: absolute;
+  opacity: 0.5;
+  right: 36px;
+  top: 22px;
+  fill:$int-fill;
+  &--cubic {
+    top: 31px;
+    right: 27px;
+  }
+}
+
+@media (min-width:$tablet-width) {
+  .main__title {
+    @include reset;
+    position: relative;
+    padding-top: 120px;
+    padding-bottom: 380px;
+    background: $bg-color url(../images/desktop/hero-desktop.jpg) no-repeat 50% -27px;
+    text-align: center;
+    font-size: 43px;
+    color:$bold;
+    line-height: 50px;
+  }
+
+  .container--bg {
+    &::before {
+      content: '';
+      width: 100%;
+      height: 717px;
+      background-color:$bg-color;
+      position: absolute;
+      left: 0;
+      z-index: 0;
+    }
+  }
+
+  .index-catalog {
+    display: flex;
+  }
+
+  .index-catalog__item {
+    min-width:334px;
+    padding-bottom: 35px;
+    &--left {
+      padding-top: 30px;
+      padding-left: 35px;
+    }
+    &--right {
+      padding-top: 30px;
+      padding-left: 35px;
+    }
+  }
+
+  .index-catalog__toy {
+    top: 30px;
+    right:35px;
+  }
+
+  .zig-zag {
+    position: relative;
+    z-index: 2;
+    top: -22px;
+  }
+}
+
+@media (min-width:$desktop-width) {
+  .main__title {
+    @include reset;
+    position: relative;
+    padding-top: 160px;
+    padding-bottom: 350px;
+    background: $bg-color url(../images/desktop/hero-desktop.jpg) no-repeat 50% -27px;
+    text-align: center;
+    font-size: 43px;
+    color:$bold;
+    line-height: 50px;
+  }
+
+  .container--bg {
+    &::before {
+      height: 747px;
+    }
+  }
+
+  .index-catalog__item {
+    flex-basis:575px;
+    padding-bottom: 37px;
+    &--left {
+      padding-top: 30px;
+      padding-left: 35px;
+    }
+    &--right {
+      padding-top: 30px;
+      padding-left: 35px;
+    }
   }
 }

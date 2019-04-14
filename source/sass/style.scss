@@ -3,6 +3,7 @@
 @import 'outline.scss';
 @import 'variables.scss';
 @import 'normalize.scss';
+@import 'page-main.scss';
 
 @font-face {
     font-family: "Open Sans", sans-serif;
@@ -47,8 +48,9 @@ img {
 
 @media (min-width:$tablet-width) {
   .container {
-    width: auto;
+    width: 768px;
     padding: 0 50px;
+    margin: 0 auto;
   }
 }
 
