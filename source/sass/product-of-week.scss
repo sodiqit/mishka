@@ -1,0 +1,218 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+.product-of-week__title {
+  @include reset;
+  font-size: 25px;
+  line-height: 30px;
+  color: $bold;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.product-of-week__mark {
+  @include reset;
+  font-size: 16px;
+  line-height: 20px;
+  color:$mark-color;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 33px;
+}
+
+.product-of-week__description {
+  @include reset;
+  margin-bottom: 30px;
+  color: $price-color;
+}
+
+.table-description {
+  margin-bottom: 28px;
+  color: $price-color;
+  tr {
+    box-shadow: 0 1px 0 0 $gray-shadow;
+  }
+  &__value {
+    padding-left: 20px;
+  }
+}
+
+.triple-set-desktop,
+.triple-set-tablet {
+  display: none;
+}
+
+.product-of-week__price {
+  font-size: 17px;
+  font-weight: bold;
+  color:$price-color;
+  text-align: center;
+}
+
+.product-of-week__button {
+  margin-bottom: 30px;
+}
+
+@media (min-width:$tablet-width) {
+  .container-product-of-week {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .product-of-week__title {
+    @include reset;
+    font-size: 43px;
+    line-height: 50px;
+    color: $bold;
+    font-weight: bold;
+  }
+
+  .product-of-week__title-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    margin-top: 42px;
+    align-items: center;
+    flex-basis:668px;
+  }
+
+  .product-of-week__mark {
+    @include reset;
+    font-size: 17px;
+    line-height: 17px;
+    text-align: center;
+    width: 120px;
+    align-self: flex-end;
+    padding-bottom: 5px;
+  }
+
+  .product-of-week__description {
+    margin-bottom: 55px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .product-of-week__price {
+    margin-top: 0;
+    font-size: 20px;
+  }
+
+  .product-of-week__button {
+    font-size: 17px;
+    line-height: 20px;
+    width: 290px;
+    margin-bottom: 50px;
+  }
+
+  .table-description {
+    margin-bottom: 0;
+    td {
+      padding-bottom: 11px;
+    }
+  }
+
+  .product-of-week__block1 {
+    margin-bottom: -5px;
+  }
+
+  .product-of-week__block2 {
+    margin-top: -109px;
+  }
+
+  .triple-set-mobile,
+  .triple-set-desktop {
+    display: none;
+  }
+
+  .triple-set-container {
+    margin-top: 5px;
+    margin-left: auto;
+  }
+
+  .triple-set-tablet {
+    display: block;
+  }
+}
+
+@media (min-width:$desktop-width) {
+  .product-of-week {
+    margin-top: -5px;
+  }
+
+  .container-product-of-week {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -5px;
+  }
+
+  .product-of-week__title {
+    @include reset;
+    font-size: 53px;
+    line-height: 57px;
+    margin-right: auto;
+  }
+
+  .product-of-week__title-container {
+    flex-direction: row-reverse;
+    margin-bottom: 50px;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-basis:1050px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .product-of-week__mark {
+    margin-right: 39px;
+    width: 132px;
+    padding-left: 32px;
+  }
+
+  .product-of-week__description {
+    margin-bottom: 60px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .product-of-week__price {
+    margin-top: 0;
+  }
+
+  .table-description {
+    margin-bottom: 0;
+    td {
+      padding-bottom: 11px;
+    }
+  }
+
+  .product-of-week__block1 {
+    margin-bottom: -5px;
+    margin-left: 171px;
+  }
+
+  .product-of-week__block2 {
+    margin-top: -92px;
+    margin-left: 171px;
+  }
+
+  .triple-set-mobile,
+  .triple-set-tablet {
+    display: none;
+  }
+
+  .triple-set-container {
+    margin-top: 5px;
+    margin-left: auto;
+    margin-bottom: auto;
+    position: relative;
+    margin-top: -160px;
+  }
+
+  .triple-set-desktop {
+    display: block;
+  }
+}

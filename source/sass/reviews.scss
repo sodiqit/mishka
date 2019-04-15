@@ -1,0 +1,107 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+.reviews__title {
+  @include reset;
+  font-size: 25px;
+  line-height: 30px;
+  color:$bold;
+  font-weight: bold;
+  margin-bottom: 35px;
+}
+
+.reviews__text {
+  @include reset;
+  font-size: 15px;
+  line-height: 30px;
+  color: $price-color;
+  margin-bottom: 35px;
+}
+
+.reviews__author {
+  @include reset;
+  font-size: 17px;
+  color:$bold;
+  margin-bottom: 35px;
+  line-height: 30px;
+  font-weight: bold;
+  .reviews__address {
+    color:$price-color;
+    font-weight: normal;
+  }
+}
+
+.reviews__toggles {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reviews__toggle {
+  @include reset;
+  width: 130px;
+  min-height: 50px;
+  background-color: #ffffff;
+  border:2px solid $gray-shadow;
+  margin-bottom: 38px;
+  position: relative;
+  z-index: -1;
+  &--left {
+    border-right: 1px solid $gray-shadow;
+    &::after {
+      content:'';
+      width: 19px;
+      height: 19px;
+      background-color:red;
+      position: absolute;
+      border:5px solid $bold;
+      background-color: #ffffff;
+      border-top-width: 0;
+      border-right-width: 0;
+      transform:rotate(45deg);
+      top: 13px;
+      left: 42px;
+    }
+    &::before {
+      content:'';
+      width: 50px;
+      height: 4px;
+      background-color: $bold;
+      position: absolute;
+      top: 20px;
+      right: 37px;
+      z-index: 1;
+    }
+  }
+  &--right {
+    border-left: 1px solid $gray-shadow;
+    &::after {
+      content:'';
+      width: 19px;
+      height: 19px;
+      background-color:red;
+      position: absolute;
+      border:5px solid $bold;
+      background-color: #ffffff;
+      border-top-width: 0;
+      border-right-width: 0;
+      transform:rotate(-135deg);
+      top: 13px;
+      left: 73px;
+    }
+    &::before {
+      content:'';
+      width: 50px;
+      height: 4px;
+      background-color: $bold;
+      position: absolute;
+      top: 20px;
+      right: 34px;
+      z-index: 1;
+    }
+  }
+}
+
+.toggle__svg {
+  position: relative;
+  z-index: 2;
+}

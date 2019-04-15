@@ -3,7 +3,7 @@
 
 .main__title {
   @include reset;
-  background: $bg-color url(../images/mobile/hero-mobile.jpg) no-repeat 50% -6px;
+  background: $bg-color url(../images/mobile/hero-mobile.jpg) no-repeat 50% 8%;
   padding-top: 75px;
   padding-bottom: 130px;
   padding-left: 30px;
@@ -55,6 +55,10 @@
   }
 }
 
+.zig-zag {
+  display: none;
+}
+
 @media (min-width:$tablet-width) {
   .main__title {
     @include reset;
@@ -104,6 +108,7 @@
 
   .zig-zag {
     position: relative;
+    display: block;
     z-index: 2;
     top: -22px;
   }

@@ -3,7 +3,11 @@
 @import 'outline.scss';
 @import 'variables.scss';
 @import 'normalize.scss';
-@import 'page-main.scss';
+@import 'pick-catalog.scss';
+@import 'button.scss';
+@import 'product-of-week.scss';
+@import 'about-us.scss';
+@import 'reviews.scss';
 
 @font-face {
     font-family: "Open Sans", sans-serif;
@@ -30,9 +34,13 @@ body {
     font-family: 'Open Sans' ,'Arial', sans-serif;
     font-size: 17px;
     line-height: 24px;
+    color: $price-color;
     font-weight: normal;
     a {
         text-decoration: none;
+    }
+    h2 {
+      color:$bold;
     }
 }
 
@@ -41,12 +49,23 @@ img {
   height: auto;
 }
 
-// .container {
-//   width: auto;
-//   padding: 0 40px;
-// }
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.container-product-of-week,
+.mobile-container {
+  width: 320px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
 
 @media (min-width:$tablet-width) {
+
   .container {
     width: 768px;
     padding: 0 50px;
@@ -55,7 +74,8 @@ img {
 }
 
 @media (min-width:$desktop-width) {
-  .container {
+  .container,
+  .container-desktop {
     width: 1250px;
     padding: 0 100px;
     margin: 0 auto;
