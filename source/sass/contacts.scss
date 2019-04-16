@@ -1,0 +1,52 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+.contacts__title {
+  @include reset;
+  margin-top: 35px;
+  margin-bottom: 43px;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.contacts__table {
+  @include reset;
+  font-size: 15px;
+  line-height: 30px;
+  margin-bottom: 40px;
+  tr {
+    padding-bottom: 40px;
+  }
+}
+
+.contacts__value {
+  padding-left: 25px;
+  a {
+    color:inherit;
+    border-bottom: 2px solid $mail-border;
+    padding-bottom: 5px;
+  }
+}
+
+.contacts__map-container {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-bottom: 35px;
+}
+
+.contacts__map {
+  &--desktop {
+    display: none;
+  }
+  &--tablet {
+    display: none;
+  }
+}
+
+.contacts__button {
+  margin-bottom: 40px;
+}
