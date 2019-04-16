@@ -105,7 +105,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 82px;
+    margin-bottom: 80px;
   }
 
   .advantages__item {
@@ -120,6 +120,7 @@
     }
     &--heart {
       order:4;
+      margin-bottom: 0;
     }
     &--ball {
       order:1;
@@ -129,6 +130,7 @@
     }
     &--box {
       order:6;
+      margin-bottom: 0;
     }
   }
 }
@@ -161,6 +163,7 @@
     }
     &--heart {
       order:4;
+      margin-bottom: 0;
     }
     &--ball {
       order:1;
@@ -173,6 +176,7 @@
     &--box {
       order:6;
       margin-right: 189px;
+      margin-bottom: 0;
     }
   }
 }
