@@ -193,6 +193,8 @@
     &--new,
     &--sale {
       display: none;
+      color:$bold;
+      font-weight: bold;
     }
   }
 }
