@@ -540,23 +540,27 @@
   </footer>
 
   <section class="modal">
-    <h2 class="modal__title">Добавить в корзину</h2>
-    <form action="https://echo.htmlacademy.ru" class="modal__form" method="post">
-      <h3 class="modal__subtitle">Выберите размер:</h3>
-      <label class="modal__size">
-        <input class="visually-hidden" type="radio" name="size" value="s">
-        <span class="modal__size__button">s</span>
-      </label>
-      <label class="modal__size">
-        <input class="visually-hidden" type="radio" name="size" value="m">
-        <span class="modal__size__button">m</span>
-      </label>
-      <label class="modal__size">
-        <input class="visually-hidden" type="radio" name="size" value="l">
-        <span class="modal__size__button">l</span>
-      </label>
-      <button class="modal__button button">Добавить</button>
-    </form>
+    <div class="mobile-container container--modal">
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <form action="https://echo.htmlacademy.ru" class="modal__form" method="post">
+        <h3 class="modal__subtitle">Выберите размер:</h3>
+        <div class="modal__size-container">
+          <label class="modal__size">
+            <input class="visually-hidden" type="radio" name="size" value="s">
+            <span class="modal__size__button">s</span>
+          </label>
+          <label class="modal__size">
+            <input class="visually-hidden" type="radio" name="size" value="m">
+            <span class="modal__size__button">m</span>
+          </label>
+          <label class="modal__size">
+            <input class="visually-hidden" type="radio" name="size" value="l">
+            <span class="modal__size__button">l</span>
+          </label>
+        </div>
+        <button class="modal__button button">Добавить</button>
+      </form>
+    </div>
   </section>
 </body>
 

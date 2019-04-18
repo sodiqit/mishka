@@ -10,6 +10,7 @@
 @import 'reviews.scss';
 @import 'contacts.scss';
 @import 'footer.scss';
+@import 'modal.scss';
 
 @font-face {
     font-family: "Open Sans", sans-serif;
@@ -67,6 +68,10 @@ img {
 }
 
 @media (min-width:$tablet-width) {
+
+  .mobile-container {
+    width: auto;
+  }
 
   .container {
     width: 768px;
