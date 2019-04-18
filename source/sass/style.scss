@@ -1,16 +1,16 @@
-@import 'page-header.scss';
+@import 'index/page-header.scss';
 @import 'mixins.scss';
 @import 'outline.scss';
 @import 'variables.scss';
 @import 'normalize.scss';
-@import 'pick-catalog.scss';
-@import 'button.scss';
-@import 'product-of-week.scss';
-@import 'about-us.scss';
-@import 'reviews.scss';
-@import 'contacts.scss';
-@import 'footer.scss';
-@import 'modal.scss';
+@import 'index/pick-catalog.scss';
+@import 'index/button.scss';
+@import 'index/product-of-week.scss';
+@import 'index/about-us.scss';
+@import 'index/reviews.scss';
+@import 'index/contacts.scss';
+@import 'index/footer.scss';
+@import 'index/modal.scss';
 
 @font-face {
     font-family: "Open Sans", sans-serif;
