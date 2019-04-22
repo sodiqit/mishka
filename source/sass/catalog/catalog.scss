@@ -139,11 +139,12 @@
     margin-bottom: 60px;
   }
 
-  .zig-zag {
-    position: absolute;
-    top: 292px;
-    z-index: 2;
-
+  .catalog-page {
+    .zig-zag {
+      position: absolute;
+      top: 318px;
+      z-index: 2;
+    }
   }
 
   .catalog-main__title {
@@ -286,10 +287,12 @@
     margin-bottom: 105px;
   }
 
-  .zig-zag {
-    position: absolute;
-    top: 318px;
-    z-index: 2;
+  .catalog-page {
+    .zig-zag {
+      position: absolute;
+      top: 318px;
+      z-index: 2;
+    }
   }
 
   .catalog-main__title {
