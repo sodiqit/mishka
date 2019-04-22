@@ -1,0 +1,49 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+.radio__box {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border:15px solid #ffffff;
+  box-shadow: 0 0 0 2px #444444;
+  transition: background-color 0.1s;
+}
+
+input[type="radio"]:checked + .radio__box {
+  background-color: $mail-border;
+}
+
+.check__box {
+  display: block;
+  position: relative;
+  width: 52px;
+  height: 52px;
+  background-color: #ffffff;
+  border:2px solid #444444;
+  transition: background-color 0.1s;
+  &::after {
+    content:'';
+    position: absolute;
+    top: 10px;
+    left: 9px;
+    width: 0;
+    height: 0;
+    background-color: #ffffff;
+    transform:rotate(-45deg);
+    transition: height 0.2s, width 0.2s,border 0.2s;
+  }
+}
+
+input[type="checkbox"]:checked + .check__box {
+  &::after {
+    width: 31px;
+    height: 17px;
+    border:3px solid $bold;
+    border-right: 0;
+    border-top: 0;
+    transition: height 0.2s, width 0.2s,border 0.2s;
+  }
+}

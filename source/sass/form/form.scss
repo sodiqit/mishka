@@ -1,0 +1,152 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+
+.form-main__title {
+  @include reset;
+  font-size: 27px;
+  line-height: 30px;
+  color:$bold;
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 75px;
+  margin-bottom: 25px;
+  background-color:$bg-footer;
+}
+
+.main__description {
+  font-size: 13px;
+}
+
+.main-form__title {
+  vertical-align: middle;
+  font-size: 17px;
+  line-height: 16px;
+  color:$mark-color;
+  text-transform: uppercase;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #fff;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: $mark-color;
+    top: 50%;
+  }
+}
+
+.main-form__type {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-bottom: 15px;
+}
+
+.radio__box {
+  width: 38px;
+  height: 38px;
+  border:11px solid #ffffff;
+  margin-right: 24px;
+  flex-shrink: 0;
+}
+
+.main-form__label {
+  font-size: 17px;
+  line-height: 18px;
+  color:$bold;
+  font-weight: bold;
+}
+
+.main-form__color {
+  display: flex;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.check__box {
+  margin-right: 23px;
+  width: 44px;
+  height: 44px;
+}
+
+input[type="checkbox"]:checked + .check__box {
+  &::after {
+    width: 22px;
+    height: 11px;
+  }
+}
+
+.main-form__names {
+  .main-form__label {
+    display: block;
+    margin-bottom: 17px;
+  }
+}
+
+.input-form {
+  display: block;
+  width: 100%;
+  border:none;
+  font-size: 17px;
+  line-height: 18px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid $bold;
+  margin-bottom: 23px;
+  &--text {
+    border:2px solid $bold;
+    padding-left: 15px;
+    padding-top: 15px;
+    min-height: 140px;
+    margin-bottom: 60px;
+  }
+  &::placeholder {
+    color:rgba(68,68,68,0.3);
+  }
+}
+
+.main-form__tel,
+.main-form__email {
+  display: block;
+  position: relative;
+}
+
+.phone {
+  width: 24px;
+  height: 24px;
+  opacity: 0.2;
+  position: absolute;
+  bottom: 17px;
+  right: 8px;
+}
+
+.email {
+  width: 32px;
+  height: 21px;
+  position: absolute;
+  bottom: 15px;
+  right: 4px;
+  opacity: 0.2;
+}
+
+.main-form__required {
+  position: relative;
+  top: -102px;
+}
+
+.main-form {
+  margin-bottom: 33px;
+}
+
+@media (min-width:$tablet-width) {
+  .form-page {
+    .zig-zag {
+      position: absolute;
+      top: 318px;
+      z-index: 2;
+    }
+  }
+}
