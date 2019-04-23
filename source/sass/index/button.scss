@@ -1,0 +1,15 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+.button {
+  width: 260px;
+  min-height: 50px;
+  border: 2px solid $price-color;
+  background-color: #ffffff;
+  text-transform: uppercase;
+  color:$price-color;
+  font-weight: bold;
+  cursor:pointer;
+  font-size: 17px;
+  line-height: 20px;
+}

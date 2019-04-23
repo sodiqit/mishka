@@ -1,0 +1,132 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+.page-footer {
+  background-color: $bg-footer;
+}
+
+.logo-footer {
+  display: none;
+}
+
+.footer-social {
+  @include reset;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow:0 1px 0 0 $footer-shadow;
+}
+
+.footer-social__item {
+  .footer-social__link {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &--instagram {
+    margin-left: 57px;
+    margin-right: 40px;
+  }
+  &--twitter {
+    margin-right: 62px;
+    margin-left: 40px;
+  }
+}
+
+.footer-developer {
+  @include reset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 18px;
+  color:$bold;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.footer-fill {
+  fill:#231F20;
+  &--html {
+    fill:$mark-color;
+    margin-left: 28px;
+  }
+}
+
+@media (min-width:$tablet-width) {
+
+  .logo-footer {
+    display: block;
+  }
+
+  .container--footer {
+    display: flex;
+    align-items: center;
+    min-height: 142px;
+  }
+
+  .footer-social {
+    margin-left: 167px;
+    box-shadow:0 0 0 0;
+  }
+
+  .footer-social__item {
+    .footer-social__link {
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &--instagram {
+      margin-left: 0;
+      margin-right: 40px;
+    }
+    &--twitter {
+      margin-right: 0;
+      margin-left: 40px;
+    }
+  }
+
+  .footer-developer {
+    @include reset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 18px;
+    color:$bold;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    margin-left: auto;
+  }
+
+  .footer-fill {
+    fill:#231F20;
+    &--html {
+      fill:$mark-color;
+      margin-left: 28px;
+    }
+  }
+}
+
+@media (min-width:$desktop-width) {
+  .container--footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 142px;
+  }
+
+  .footer-social {
+    margin-left: 346px;
+    box-shadow:0 0 0 0;
+  }
+
+  .footer-developer {
+    margin-left: auto;
+  }
+}
