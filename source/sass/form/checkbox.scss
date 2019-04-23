@@ -10,6 +10,7 @@
   border:15px solid #ffffff;
   box-shadow: 0 0 0 2px #444444;
   transition: background-color 0.1s;
+  cursor:pointer;
 }
 
 input[type="radio"]:checked + .radio__box {
@@ -24,6 +25,7 @@ input[type="radio"]:checked + .radio__box {
   background-color: #ffffff;
   border:2px solid #444444;
   transition: background-color 0.1s;
+  cursor:pointer;
   &::after {
     content:'';
     position: absolute;
