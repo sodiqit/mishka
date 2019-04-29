@@ -71,6 +71,18 @@
     margin-bottom: 55px;
     font-size: 43px;
     line-height: 50px;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+
+      right: 0;
+
+      width: 46px;
+      height: 81px;
+
+      background-image: url(../../images/flag.svg);
+    }
   }
 
   .contacts__table {
@@ -153,6 +165,9 @@
     font-size: 53px;
     line-height: 57px;
     align-self: baseline;
+    &::after {
+      left: -110px;
+    }
   }
 
   .contacts__table {

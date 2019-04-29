@@ -136,6 +136,23 @@
   .index-catalog__item {
     flex-basis:575px;
     padding-bottom: 37px;
+    &:hover {
+      padding-top: 25px;
+    }
+    &:hover > .index-catalog__toy {
+      top: 25px;
+      opacity: 0.7;
+    }
+    &:active > .index-catalog__toy {
+      top: 25px;
+      opacity: 0.3;
+    }
+    &:hover a {
+      opacity: 0.6;
+    }
+    &:active a {
+      opacity: 0.3;
+    }
     &--left {
       padding-top: 30px;
       padding-left: 35px;
