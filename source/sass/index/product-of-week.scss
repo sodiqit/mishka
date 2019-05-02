@@ -38,10 +38,6 @@
   }
 }
 
-.triple-set-desktop,
-.triple-set-tablet {
-  display: none;
-}
 
 .product-of-week__price {
   font-size: 17px;
@@ -121,14 +117,11 @@
     margin-top: -109px;
   }
 
-  .triple-set-mobile,
-  .triple-set-desktop {
-    display: none;
-  }
-
   .triple-set-container {
     margin-top: 5px;
     margin-left: auto;
+    width: 333px;
+    height: 404px;
   }
 
   .triple-set-tablet {
@@ -199,17 +192,14 @@
     margin-left: 171px;
   }
 
-  .triple-set-mobile,
-  .triple-set-tablet {
-    display: none;
-  }
-
   .triple-set-container {
     margin-top: 5px;
     margin-left: auto;
     margin-bottom: auto;
     position: relative;
     margin-top: -160px;
+    width: 525px;
+    height: 636px;
   }
 
   .triple-set-desktop {
