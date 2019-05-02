@@ -10,15 +10,9 @@
 .page-header__logo {
   display: block;
   height: 79px;
-  &-img-mobile {
+  &-img {
     margin-left: 36%;
     margin-top: 22px;
-  }
-  &-img-tablet {
-    display: none;
-  }
-  &-img-desktop {
-    display: none;
   }
 }
 
@@ -97,14 +91,10 @@
     &:active {
       opacity:0.3;
     }
-    &-img-mobile {
-      display: none;
-    }
-    &-img-tablet {
-      display: block;
-    }
-    &-img-desktop {
-      display: none;
+    &-img {
+      margin: 0;
+      width: 112px;
+      height: 46px;
     }
   }
 
@@ -248,14 +238,9 @@
     padding-bottom: 7px;
     margin-left: 40px;
     box-shadow:none;
-    &-img-mobile {
-      display: none;
-    }
-    &-img-tablet {
-      display: none;
-    }
-    &-img-desktop {
-      display: block;
+    &-img {
+      width: 149px;
+      height: 72px;
     }
   }
 

@@ -3,7 +3,10 @@
 
 .main__title {
   @include reset;
-  background: $bg-color url(../images/mobile/hero-mobile.jpg) no-repeat 50% 8%;
+  background-image:url(../images/mobile/hero-mobile.jpg);
+  background-color: $bg-color;
+  background-repeat: no-repeat;
+  background-position: 50% 8%;
   padding-top: 75px;
   padding-bottom: 130px;
   padding-left: 30px;
@@ -13,6 +16,14 @@
   color:$bold;
   line-height: 30px;
 }
+
+@media (min-resolution:$retina-dpi),
+       (min-resolution:$retina-dppx) {
+         .main__title {
+           background-image:url(../images/mobile/hero-mobile@2x.jpg);
+           background-size: 320px auto;
+         }
+       }
 
 .index-catalog {
   list-style: none;
@@ -65,12 +76,23 @@
     position: relative;
     padding-top: 120px;
     padding-bottom: 380px;
-    background: $bg-color url(../images/desktop/hero-desktop.jpg) no-repeat 50% -27px;
+    background-image:url(../images/desktop/hero-desktop.jpg);
+    background-color: $bg-color;
+    background-repeat: no-repeat;
+    background-position: 50% -27px;
     text-align: center;
     font-size: 43px;
     color:$bold;
     line-height: 50px;
   }
+
+  @media (min-resolution:$retina-dpi),
+         (min-resolution:$retina-dppx) {
+           .main__title {
+             background-image: url(../images/desktop/hero-desktop@2x.jpg);
+             background-size: 768px auto;
+           }
+         }
 
   .container--bg {
     &::before {
@@ -120,7 +142,6 @@
     position: relative;
     padding-top: 160px;
     padding-bottom: 350px;
-    background: $bg-color url(../images/desktop/hero-desktop.jpg) no-repeat 50% -27px;
     text-align: center;
     font-size: 43px;
     color:$bold;
