@@ -14,9 +14,11 @@
     <div class="container">
       <div class="page-header__wrapper-one">
         <a class="page-header__logo" href="#">
-          <img class="page-header__logo-img-mobile" src="images/mobile/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип компании Mishka">
-          <img class="page-header__logo-img-tablet" src="images/tablet/mishka-logo-tablet.svg" width="112" height="46" alt="Логотип компании Mishka">
-          <img class="page-header__logo-img-desktop" src="images/desktop/mishka-logo-desktop.svg" width="149" height="72" alt="Логотип компании Mishka">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="images/desktop/mishka-logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="images/tablet/mishka-logo-tablet.svg">
+            <img class="page-header__logo-img" src="images/mobile/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип компании Mishka">
+          </picture>
         </a>
           <nav class="main-nav">
             <ul class="main-nav__navigation site-navigation">
