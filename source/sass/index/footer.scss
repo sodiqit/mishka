@@ -60,6 +60,20 @@
 
   .logo-footer {
     display: block;
+    svg {
+      transition: all 0.3s;
+    }
+    &:hover {
+      svg {
+        fill:$contacts-link;
+      }
+    }
+    &:active {
+      svg {
+        fill:$contacts-link;
+      }
+      opacity: 0.3;
+    }
   }
 
   .container--footer {
@@ -79,6 +93,17 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      .footer-fill {
+        transition: all 0.3s;
+      }
+      &:hover {
+        .footer-fill {
+          fill:$contacts-link;
+        }
+      }
+      &:active {
+        opacity: 0.3;
+      }
     }
     &--instagram {
       margin-left: 0;
@@ -109,6 +134,12 @@
     &--html {
       fill:$mark-color;
       margin-left: 28px;
+      &:hover {
+        fill:$contacts-link;
+      }
+      &:active {
+        opacity: 0.3;
+      }
     }
   }
 }

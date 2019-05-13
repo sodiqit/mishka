@@ -21,11 +21,6 @@
   &--address {
     padding-top: 35px;
   }
-  a {
-    color:inherit;
-    border-bottom: 2px solid $mail-border;
-    padding-bottom: 5px;
-  }
 }
 
 .contacts__map-container {
@@ -37,30 +32,36 @@
   margin-left: -50vw;
   margin-right: -50vw;
   margin-bottom: 35px;
-  .contacts__map--mobile,
-  .contacts__map--tablet{
-    width: 100vw;
-    height: 457px;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    margin-bottom: 35px;
-  }
 }
 
 .contacts__map {
-  &--desktop {
-    display: none;
-  }
-  &--tablet {
-    display: none;
-  }
+  width: 100vw;
+  height: 457px;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-bottom: 35px;
 }
 
 .contacts__button {
   margin-bottom: 40px;
+}
+
+.contacts__link {
+  color:inherit;
+  border-bottom: 2px solid $mail-border;
+  padding-bottom: 5px;
+
+  &:hover {
+    color:$contacts-link;
+  }
+
+  &:active {
+    color:$contacts-link;
+    opacity: 0.3;
+  }
 }
 
 @media (min-width:$tablet-width) {
@@ -71,6 +72,18 @@
     margin-bottom: 55px;
     font-size: 43px;
     line-height: 50px;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+
+      right: 0;
+
+      width: 46px;
+      height: 81px;
+
+      background-image: url(../../images/flag.svg);
+    }
   }
 
   .contacts__table {
@@ -112,15 +125,7 @@
   }
 
   .contacts__map {
-    &--desktop {
-      display: none;
-    }
-    &--tablet {
-      display: block;
-    }
-    &--mobile {
-      display: none;
-    }
+
   }
 
   .contacts__button {
@@ -153,6 +158,9 @@
     font-size: 53px;
     line-height: 57px;
     align-self: baseline;
+    &::after {
+      left: -110px;
+    }
   }
 
   .contacts__table {
@@ -198,15 +206,9 @@
   }
 
   .contacts__map {
-    &--desktop {
-      display: block;
-    }
-    &--tablet {
-      display: none;
-    }
-    &--mobile {
-      display: none;
-    }
+    width: 525px;
+    position: static;
+    margin: 0;
   }
 
   .contacts__button {

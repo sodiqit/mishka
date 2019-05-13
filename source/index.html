@@ -5,18 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style_min.css">
   <title>Mishka - Best magazine</title>
 </head>
 
 <body>
+  <div class="visually-hidden">
+    <include src="build/images/sprite.svg"></include>
+  </div>
   <header class="page-header">
     <div class="container">
       <div class="page-header__wrapper-one">
         <a class="page-header__logo" href="#">
-          <img class="page-header__logo-img-mobile" src="images/mobile/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип компании Mishka">
-          <img class="page-header__logo-img-tablet" src="images/tablet/mishka-logo-tablet.svg" width="112" height="46" alt="Логотип компании Mishka">
-          <img class="page-header__logo-img-desktop" src="images/desktop/mishka-logo-desktop.svg" width="149" height="72" alt="Логотип компании Mishka">
+          <picture>
+            <source media="(min-width: 1250px)" srcset="images/desktop/mishka-logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="images/tablet/mishka-logo-tablet.svg">
+            <img class="page-header__logo-img" src="images/mobile/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип компании Mishka">
+          </picture>
         </a>
           <nav class="main-nav">
             <ul class="main-nav__navigation site-navigation">
@@ -25,8 +30,28 @@
             </ul>
           </nav>
           <ul class="user-list">
-            <li class="user-list__item user-list__item--search">Поиск по сайту</li>
-            <li class="user-list__item user-list__item--cart"><a href="cart.html">Корзина: пока пуста</a></li>
+            <li class="user-list__item user-list__item--search">
+              <svg version="1.1" class="header__search" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                	 viewBox="0 0 17.6 17.6" style="enable-background:new 0 0 17.6 17.6;" xml:space="preserve">
+                <path d="M17.27,15.73l-3.41-3.42c0.96-1.29,1.54-2.88,1.54-4.62c0-4.25-3.45-7.7-7.7-7.7S0,3.45,0,7.7
+                	c0,4.25,3.45,7.7,7.7,7.7c1.73,0,3.33-0.58,4.61-1.55l3.42,3.42c0.2,0.2,0.42,0.33,0.77,0.33c0.61,0,1.1-0.49,1.1-1.1
+                	C17.6,16.26,17.54,16,17.27,15.73z M2.2,7.7c0-3.04,2.46-5.5,5.5-5.5s5.5,2.46,5.5,5.5s-2.46,5.5-5.5,5.5S2.2,10.74,2.2,7.7z"/>
+              </svg>
+              Поиск по сайту
+            </li>
+            <li class="user-list__item user-list__item--cart">
+              <svg class="cart" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              	 viewBox="264.21 370.96 20.29 18.85" style="enable-background:new 264.21 370.96 20.29 18.85;" xml:space="preserve">
+
+              <path  d="M283.75,378.19h-3.15l-3.41-6.81c-0.19-0.37-0.63-0.52-1.01-0.34c-0.37,0.19-0.52,0.64-0.34,1.01l3.07,6.14
+              	h-9.14l3.07-6.14c0.19-0.37,0.04-0.82-0.34-1.01c-0.37-0.18-0.82-0.03-1.01,0.34l-3.41,6.81h-3.15c-0.41,0-0.75,0.34-0.75,0.75
+              	c0,0.41,0.34,0.75,0.75,0.75h0.16l0.85,2.99c-0.19,0.14-0.32,0.35-0.32,0.6c0,0.4,0.31,0.71,0.7,0.74l1.66,5.79h12.7l1.66-5.79
+              	c0.39-0.03,0.7-0.34,0.7-0.74c0-0.25-0.13-0.46-0.32-0.6l0.85-2.99h0.16c0.41,0,0.75-0.34,0.75-0.75
+              	C284.5,378.53,284.16,378.19,283.75,378.19z M279.57,388.31h-10.43l-1.22-4.28h12.88L279.57,388.31z M281.22,382.53h-13.74
+              	l-0.81-2.84h15.36L281.22,382.53z"/>
+              </svg>
+              <a href="cart.html">Корзина: пока пуста</a>
+            </li>
           </ul>
       </div>
       <div class="page-header__wrapper-two">
@@ -70,10 +95,7 @@
             <a href="catalog.html">Детские<br> игрушки</a>
             <svg class="index-catalog__toy index-catalog__toy--cubic" width=60 height=60 version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             	 viewBox="226 226.19 60 59.62" style="enable-background:new 226 226.19 60 59.62;" xml:space="preserve">
-            <style type="text/css">
-            	.st0{fill:#149080;}
-            </style>
-            <path class="st0" d="M226,269.87l27.44,15.93v-23.35L226,246.52V269.87z M277.35,238.63v2.45c0,1.82-3.46,3.29-7.73,3.29
+            <path d="M226,269.87l27.44,15.93v-23.35L226,246.52V269.87z M277.35,238.63v2.45c0,1.82-3.46,3.29-7.73,3.29
             	c-4.27,0-7.73-1.47-7.73-3.29v-4.06h0.02c0.26,1.71,3.6,3.07,7.7,3.07c4.27,0,7.73-1.47,7.73-3.28c0-1.82-3.46-3.29-7.73-3.29
             	c-0.34,0-0.67,0.01-1,0.03l-4.97-2.89v3.09c0,1.82-3.45,3.29-7.72,3.29c-2.68,0-5.04-0.58-6.43-1.47c-0.2-0.2-0.44-0.4-0.73-0.59
             	c-0.36-0.38-0.57-0.8-0.57-1.24v-2.99l-4.81,2.79c-0.35-0.02-0.7-0.03-1.05-0.03c-4.27,0-7.73,1.47-7.73,3.29
@@ -126,9 +148,11 @@
           </table>
         </div>
         <p class="triple-set-container">
-          <img class="triple-set-desktop" src="images/desktop/triple-set-desktop.jpg" alt="Вязанные корзинки" width="525" height="636">
-          <img class="triple-set-tablet" src="images/tablet/triple-set-tablet.jpg" alt="Вязанные корзинки" width="333" height="404">
-          <img class="triple-set-mobile" src="images/mobile/triple-set-mobile.jpg" alt="Вязанные корзинки" width="260" height="315">
+          <picture>
+            <source media="(min-width: 1250px)" srcset="images/desktop/triple-set-desktop.jpg, images/desktop/triple-set-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="images/tablet/triple-set-tablet.jpg, images/desktop/triple-set-tablet@2x.jpg 2x">
+            <img src="images/mobile/triple-set-mobile.jpg" alt="Вязанные корзинки" srcset="images/mobile/triple-set-mobile@2x.jpg 2x">
+          </picture>
         </p>
         <div class="product-of-week__block2">
           <p class="product-of-week__price">Цена: 990 руб.</p>
@@ -277,7 +301,7 @@
             <tbody>
               <tr class="contacts__email">
                 <td>email:</td>
-                <td class="contacts__value"><a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></td>
+                <td class="contacts__value"><a href="mailto:info@mimimishkashop.ru" class="contacts__link">info@mimimishkashop.ru</a></td>
               </tr>
               <tr class="contacts__address">
                 <td>адрес:</td>
@@ -290,9 +314,11 @@
             </tbody>
           </table>
           <p class="contacts__map-container">
-            <img class="contacts__map contacts__map--desktop" src="images/desktop/map-desktop.jpg" alt="ул. Большая Конюшенная, д. 19/8, офис 101" width="525" height="457">
-            <img class="contacts__map contacts__map--tablet" src="images/tablet/map-tablet.jpg" alt="ул. Большая Конюшенная, д. 19/8, офис 101" width="768" height="457">
-            <img class="contacts__map contacts__map--mobile" src="images/mobile/map-mobile.jpg" alt="ул. Большая Конюшенная, д. 19/8, офис 101"  height="457">
+            <picture>
+              <source media="(min-width:1200px)" srcset="images/desktop/map-desktop.jpg">
+              <source media="(min-width:768px)" srcset="images/tablet/map-tablet.jpg">
+              <img class="contacts__map contacts__map--mobile" src="images/mobile/map-mobile.jpg" alt="ул. Большая Конюшенная, д. 19/8, офис 101" height="457">
+            </picture>
           </p>
           <button class="contacts__button button">Напишите нам</button>
         </div>

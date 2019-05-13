@@ -96,6 +96,9 @@ input[type="checkbox"]:checked + .check__box {
   padding-bottom: 15px;
   border-bottom: 2px solid $bold;
   margin-bottom: 23px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+
   &--text {
     border:2px solid $bold;
     padding-left: 15px;
@@ -106,12 +109,39 @@ input[type="checkbox"]:checked + .check__box {
   &::placeholder {
     color:rgba(68,68,68,0.3);
   }
+
+  &:hover {
+    border-color:$mail-border;
+  }
+
+  &:active {
+    border-color:$mail-border;
+  }
+
+  &:focus {
+    border-color:$mail-border;
+    outline: none;
+  }
 }
 
 .main-form__tel,
 .main-form__email {
   display: block;
   position: relative;
+}
+
+.input-form:hover + .phone,
+.input-form:active + .phone,
+.input-form:focus + .phone{
+  opacity: 1;
+  fill:$mail-border;
+}
+
+.input-form:hover + .email,
+.input-form:active + .email,
+.input-form:focus + .email{
+  opacity: 1;
+  fill:$mail-border;
 }
 
 .phone {
@@ -121,6 +151,7 @@ input[type="checkbox"]:checked + .check__box {
   position: absolute;
   bottom: 17px;
   right: 8px;
+  transition: all 0.3s;
 }
 
 .email {
@@ -130,6 +161,7 @@ input[type="checkbox"]:checked + .check__box {
   bottom: 15px;
   right: 4px;
   opacity: 0.2;
+  transition: all 0.3s;
 }
 
 .main-form__required {
@@ -341,16 +373,16 @@ input[type="checkbox"]:checked + .check__box {
     border-bottom: 2px solid $bold;
     margin-bottom: 0;
     background-color: inherit;
+    padding-left: 15px;
     &--text {
       border:2px solid $bold;
-      padding-left: 0;
+      padding-left: 15px;
       padding-top: 15px;
       min-height: 140px;
       margin-bottom: 60px;
     }
     &::placeholder {
       color:rgba(68,68,68,0.3);
-      padding-left: 15px;
     }
   }
 

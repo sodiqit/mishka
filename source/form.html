@@ -4,17 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style_min.css">
   <title>Form Mishka</title>
 </head>
 <body class="form-page">
   <header class="page-header">
     <div class="container">
       <div class="page-header__wrapper-one">
-        <a class="page-header__logo" href="#">
-          <img class="page-header__logo-img-mobile" src="images/mobile/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип компании Mishka">
-          <img class="page-header__logo-img-tablet" src="images/tablet/mishka-logo-tablet.svg" width="112" height="46" alt="Логотип компании Mishka">
-          <img class="page-header__logo-img-desktop" src="images/desktop/mishka-logo-desktop.svg" width="149" height="72" alt="Логотип компании Mishka">
+        <a class="page-header__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="images/desktop/mishka-logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="images/tablet/mishka-logo-tablet.svg">
+            <img class="page-header__logo-img" src="images/mobile/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип компании Mishka">
+          </picture>
         </a>
           <nav class="main-nav">
             <ul class="main-nav__navigation site-navigation">
@@ -23,8 +25,28 @@
             </ul>
           </nav>
           <ul class="user-list">
-            <li class="user-list__item user-list__item--search">Поиск по сайту</li>
-            <li class="user-list__item user-list__item--cart"><a href="cart.html">Корзина: пока пуста</a></li>
+            <li class="user-list__item user-list__item--search">
+              <svg version="1.1" class="header__search" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                	 viewBox="0 0 17.6 17.6" style="enable-background:new 0 0 17.6 17.6;" xml:space="preserve">
+                <path d="M17.27,15.73l-3.41-3.42c0.96-1.29,1.54-2.88,1.54-4.62c0-4.25-3.45-7.7-7.7-7.7S0,3.45,0,7.7
+                	c0,4.25,3.45,7.7,7.7,7.7c1.73,0,3.33-0.58,4.61-1.55l3.42,3.42c0.2,0.2,0.42,0.33,0.77,0.33c0.61,0,1.1-0.49,1.1-1.1
+                	C17.6,16.26,17.54,16,17.27,15.73z M2.2,7.7c0-3.04,2.46-5.5,5.5-5.5s5.5,2.46,5.5,5.5s-2.46,5.5-5.5,5.5S2.2,10.74,2.2,7.7z"/>
+              </svg>
+              Поиск по сайту
+            </li>
+            <li class="user-list__item user-list__item--cart">
+              <svg class="cart" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              	 viewBox="264.21 370.96 20.29 18.85" style="enable-background:new 264.21 370.96 20.29 18.85;" xml:space="preserve">
+
+              <path  d="M283.75,378.19h-3.15l-3.41-6.81c-0.19-0.37-0.63-0.52-1.01-0.34c-0.37,0.19-0.52,0.64-0.34,1.01l3.07,6.14
+              	h-9.14l3.07-6.14c0.19-0.37,0.04-0.82-0.34-1.01c-0.37-0.18-0.82-0.03-1.01,0.34l-3.41,6.81h-3.15c-0.41,0-0.75,0.34-0.75,0.75
+              	c0,0.41,0.34,0.75,0.75,0.75h0.16l0.85,2.99c-0.19,0.14-0.32,0.35-0.32,0.6c0,0.4,0.31,0.71,0.7,0.74l1.66,5.79h12.7l1.66-5.79
+              	c0.39-0.03,0.7-0.34,0.7-0.74c0-0.25-0.13-0.46-0.32-0.6l0.85-2.99h0.16c0.41,0,0.75-0.34,0.75-0.75
+              	C284.5,378.53,284.16,378.19,283.75,378.19z M279.57,388.31h-10.43l-1.22-4.28h12.88L279.57,388.31z M281.22,382.53h-13.74
+              	l-0.81-2.84h15.36L281.22,382.53z"/>
+              </svg>
+              <a href="cart.html">Корзина: пока пуста</a>
+            </li>
           </ul>
       </div>
       <div class="page-header__wrapper-two">
@@ -158,7 +180,7 @@
 
   <footer class="page-footer">
     <div class="container mobile-container container--footer">
-      <a href="#" class="logo-footer">
+      <a href="index.html" class="logo-footer">
         <svg version="1.1" width="102" height="34" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         	 viewBox="0 0 101.61 34.06" style="enable-background:new 0 0 101.61 34.06;" xml:space="preserve">
         <g>

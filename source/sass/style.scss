@@ -1,3 +1,4 @@
+@import 'scafolding.scss';
 @import 'index/page-header.scss';
 @import 'mixins.scss';
 @import 'outline.scss';
@@ -14,80 +15,3 @@
 @import 'catalog/catalog.scss';
 @import 'form/checkbox.scss';
 @import 'form/form.scss';
-
-@font-face {
-    font-family: "Open Sans", sans-serif;
-    src: url(../fonts/opensansregular.woff) format("woff"),
-        url(../fonts/opensansregular.eot) format("eot"),
-        url(../fonts/opensansbold.woff) format("woff"),
-        url(../fonts/opensansbold.eot) format("eot");
-    font-weight: normal;
-    font-style: normal;
-}
-
-* {
-  box-sizing: border-box;
-  &::after{
-    box-sizing: border-box;
-  }
-  &::before {
-    box-sizing: border-box;
-  }
-}
-
-body {
-    @include reset;
-    font-family: 'Open Sans' ,'Arial', sans-serif;
-    font-size: 17px;
-    line-height: 24px;
-    color: $price-color;
-    font-weight: normal;
-    a {
-        text-decoration: none;
-    }
-    h2 {
-      color:$bold;
-    }
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-}
-
-.container-product-of-week,
-.mobile-container {
-  width: 320px;
-  padding: 0 30px;
-  margin: 0 auto;
-}
-
-@media (min-width:$tablet-width) {
-
-  .mobile-container {
-    width: auto;
-  }
-
-  .container {
-    width: 768px;
-    padding: 0 50px;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width:$desktop-width) {
-  .container,
-  .container-desktop {
-    width: 1250px;
-    padding: 0 100px;
-    margin: 0 auto;
-  }
-}

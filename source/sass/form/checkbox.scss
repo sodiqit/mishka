@@ -8,13 +8,28 @@
   background-color: #ffffff;
   border-radius: 50%;
   border:15px solid #ffffff;
-  box-shadow: 0 0 0 2px #444444;
+  box-shadow: 0 0 0 2px $price-color;
   transition: background-color 0.1s;
   cursor:pointer;
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 0 0 0 2px $mail-border;
+  }
+
+  &:active {
+    box-shadow: 0 0 0 2px $price-color;
+    opacity: 0.3;
+  }
 }
 
 input[type="radio"]:checked + .radio__box {
   background-color: $mail-border;
+}
+
+input[type="radio"]:disabled + .radio__box {
+  box-shadow: 0 0 0 2px $price-color;
+  opacity: 0.3;
 }
 
 .check__box {
@@ -24,7 +39,8 @@ input[type="radio"]:checked + .radio__box {
   height: 52px;
   background-color: #ffffff;
   border:2px solid #444444;
-  transition: background-color 0.1s;
+  transition: background-color 0.1s,
+              border-color 0.1s;
   cursor:pointer;
   &::after {
     content:'';
@@ -37,6 +53,15 @@ input[type="radio"]:checked + .radio__box {
     transform:rotate(-45deg);
     transition: height 0.2s, width 0.2s,border 0.2s;
   }
+
+  &:hover {
+    border-color: $mail-border;
+  }
+
+  &:active {
+    border-color: $price-color;
+    opacity: 0.3;
+  }
 }
 
 input[type="checkbox"]:checked + .check__box {
@@ -48,4 +73,9 @@ input[type="checkbox"]:checked + .check__box {
     border-top: 0;
     transition: height 0.2s, width 0.2s,border 0.2s;
   }
+}
+
+input[type="checkbox"]:disabled + .check__box {
+  border-color:$price-color;
+  opacity: 0.3;
 }

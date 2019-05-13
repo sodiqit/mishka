@@ -107,6 +107,14 @@
       cursor: pointer;
     }
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .toggle__svg {
@@ -123,6 +131,14 @@
     padding-top: 65px;
     margin-bottom: 65px;
   }
+
+  @media (min-resolution:$retina-dpi),
+         (min-resolution:$retina-dppx) {
+           .reviews {
+             background-image:url(../images/review@2x.jpg);
+             background-size: 350px auto;
+           }
+         }
 
   .inner-container--desktop {
     display: flex;
@@ -257,6 +273,14 @@
     padding-bottom: 85px;
     margin-bottom: 65px;
   }
+
+  @media (min-resolution:$retina-dpi),
+         (min-resolution:$retina-dppx) {
+           .container--reviews {
+             background-image:url(../images/review@2x.jpg);
+             background-size: 350px auto;
+           }
+         }
 
   .reviews__title {
     @include reset;
