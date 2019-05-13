@@ -5,11 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style_min.css">
   <title>Mishka - Best magazine</title>
 </head>
 
 <body>
+  <div class="visually-hidden">
+    <include src="build/images/sprite.svg"></include>
+  </div>
   <header class="page-header">
     <div class="container">
       <div class="page-header__wrapper-one">
@@ -298,7 +301,7 @@
             <tbody>
               <tr class="contacts__email">
                 <td>email:</td>
-                <td class="contacts__value"><a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></td>
+                <td class="contacts__value"><a href="mailto:info@mimimishkashop.ru" class="contacts__link">info@mimimishkashop.ru</a></td>
               </tr>
               <tr class="contacts__address">
                 <td>адрес:</td>
@@ -311,9 +314,11 @@
             </tbody>
           </table>
           <p class="contacts__map-container">
-            <img class="contacts__map contacts__map--desktop" src="images/desktop/map-desktop.jpg" alt="ул. Большая Конюшенная, д. 19/8, офис 101" width="525" height="457">
-            <img class="contacts__map contacts__map--tablet" src="images/tablet/map-tablet.jpg" alt="ул. Большая Конюшенная, д. 19/8, офис 101" width="768" height="457">
-            <img class="contacts__map contacts__map--mobile" src="images/mobile/map-mobile.jpg" alt="ул. Большая Конюшенная, д. 19/8, офис 101"  height="457">
+            <picture>
+              <source media="(min-width:1200px)" srcset="images/desktop/map-desktop.jpg">
+              <source media="(min-width:768px)" srcset="images/tablet/map-tablet.jpg">
+              <img class="contacts__map contacts__map--mobile" src="images/mobile/map-mobile.jpg" alt="ул. Большая Конюшенная, д. 19/8, офис 101" height="457">
+            </picture>
           </p>
           <button class="contacts__button button">Напишите нам</button>
         </div>

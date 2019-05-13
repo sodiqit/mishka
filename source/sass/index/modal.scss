@@ -47,7 +47,11 @@
   font-weight: normal;
 }
 
-.modal__size {
+input[type="radio"]:checked + .modal__size__button {
+  border-color:$mail-border;
+}
+
+.modal__size__button {
   width: 80px;
   height: 50px;
   display: flex;
@@ -55,7 +59,17 @@
   align-items: center;
   border:2px solid $gray-shadow;
   cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    border-color:$price-color;
+  }
+
+  &:active {
+    border-color:$mail-border;
+  }
 }
+
 
 .modal__size-container {
   display: flex;
@@ -120,15 +134,10 @@
     font-weight: normal;
   }
 
-  .modal__size {
+  .modal__size__button {
     width: 110px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border:2px solid $gray-shadow;
-    cursor: pointer;
   }
+
 
   .modal__size-container {
     display: flex;

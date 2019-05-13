@@ -154,9 +154,14 @@
     }
   }
 
+  .index-catalog__toy {
+    transition: all 0.3s;
+  }
+
   .index-catalog__item {
     flex-basis:575px;
     padding-bottom: 37px;
+    transition: all 0.3s;
     &:hover {
       padding-top: 25px;
     }
